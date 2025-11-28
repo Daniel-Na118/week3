@@ -28,5 +28,5 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: ap-southeast-2
         run: |
-          aws s3 sync ./dist s3://2048-dn --delete
-          aws cloudfront create-invalidation --distribution-id E1LGUHYAGTYB3W --paths "/*"\
+          aws s3 sync ./dist s3://2048-bucket-client --delete
+          aws cloudfront create-invalidation --distribution-id E33XA1VLWOJL81 --paths "/*"\
